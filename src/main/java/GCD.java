@@ -20,6 +20,19 @@ public class GCD {
         if (x == 1 || y == 1) {
             return 1;
         }
-        return 0;
+        return iterator();
     }
+
+    private float iterator() {
+        if (y == 0) {
+            return Float.valueOf(x);
+        } else {
+            int xMem = x;
+            int yMem = y;
+            this.y = xMem % yMem;
+            this.x = yMem;
+            return iterator();
+        }
+    }
+
 }
