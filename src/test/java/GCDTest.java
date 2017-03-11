@@ -26,4 +26,10 @@ public class GCDTest {
         gcd.calculate();
     }
 
+    @Test
+    public void testCalculateMethodReturnsInt() {
+        GCD gcd = new GCD(1, 2);
+        int value = gcd.calculate();
+    }
+
 }
