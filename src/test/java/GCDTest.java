@@ -54,4 +54,25 @@ public class GCDTest {
         assertEquals(NaN, value, 0);
     }
 
+    @Test
+    public void testZeroIntegerReturnZeroFirstZeroInteger() throws Exception {
+        GCD gcd = new GCD(0, 1);
+        float value = gcd.calculate();
+        assertEquals(0, value, 0);
+    }
+
+    @Test
+    public void testZeroIntegerReturnZeroSecondZeroInteger() throws Exception {
+        GCD gcd = new GCD(1, 0);
+        float value = gcd.calculate();
+        assertEquals(0, value, 0);
+    }
+
+    @Test
+    public void testZeroIntegerReturnZeroBothZeroInteger() throws Exception {
+        GCD gcd = new GCD(0, 0);
+        float value = gcd.calculate();
+        assertEquals(0, value, 0);
+    }
+
 }
