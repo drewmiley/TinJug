@@ -20,4 +20,10 @@ public class GCDTest {
         GCD gcd = new GCD(1, 2);
     }
 
+    @Test
+    public void testCalculateMethodExists() {
+        GCD gcd = new GCD(1, 2);
+        gcd.calculate();
+    }
+
 }
