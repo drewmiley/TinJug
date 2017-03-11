@@ -75,4 +75,49 @@ public class GCDTest {
         assertEquals(0, value, 0);
     }
 
+    @Test
+    public void testOneReturnOneFirstOne() throws Exception {
+        GCD gcd = new GCD(1, 2);
+        float value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(1, 3);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(1, 10);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(1, 1000);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+    }
+
+    @Test
+    public void testOneReturnOneSecondOne() throws Exception {
+        GCD gcd = new GCD(2, 1);
+        float value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(3, 1);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(10, 1);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+
+        gcd = new GCD(1000, 1);
+        value = gcd.calculate();
+        assertEquals(1, value, 0);
+    }
+
+    @Test
+    public void testOneIntegerReturnOneBothOne() throws Exception {
+        GCD gcd = new GCD(1, 1);
+        float value = gcd.calculate();
+        assertEquals(1, value, 0);
+    }
+
 }
