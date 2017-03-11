@@ -1,10 +1,19 @@
+import static java.lang.Float.NaN;
+
 public class GCD {
 
-    GCD(int x, int y) {
+    private int x;
+    private int y;
 
+    GCD(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public int calculate() {
+    public float calculate() {
+        if (x < 0 || y < 0) {
+            return NaN;
+        }
         return 0;
     }
 }

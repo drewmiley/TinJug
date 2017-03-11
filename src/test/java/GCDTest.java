@@ -28,30 +28,30 @@ public class GCDTest {
     }
 
     @Test
-    public void testCalculateMethodReturnsInt() {
+    public void testCalculateMethodReturnsFloat() {
         GCD gcd = new GCD(1, 2);
-        int value = gcd.calculate();
+        float value = gcd.calculate();
     }
 
     @Test
     public void testNegativeIntegersReturnNaNFirstNegativeInteger() throws Exception {
         GCD gcd = new GCD(-1, 2);
-        int value = gcd.calculate();
-        assertEquals(NaN, value);
+        float value = gcd.calculate();
+        assertEquals(NaN, value, 0);
     }
 
     @Test
     public void testNegativeIntegersReturnNaNSecondNegativeInteger() throws Exception {
         GCD gcd = new GCD(1, -2);
-        int value = gcd.calculate();
-        assertEquals(NaN, value);
+        float value = gcd.calculate();
+        assertEquals(NaN, value, 0);
     }
 
     @Test
     public void testNegativeIntegersReturnNaNBothNegativeInteger() throws Exception {
         GCD gcd = new GCD(-1, -2);
-        int value = gcd.calculate();
-        assertEquals(NaN, value);
+        float value = gcd.calculate();
+        assertEquals(NaN, value, 0);
     }
 
 }
