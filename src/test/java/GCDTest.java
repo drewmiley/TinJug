@@ -2,6 +2,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.lang.Float.NaN;
 import static org.junit.Assert.*;
 
 public class GCDTest {
@@ -30,6 +31,27 @@ public class GCDTest {
     public void testCalculateMethodReturnsInt() {
         GCD gcd = new GCD(1, 2);
         int value = gcd.calculate();
+    }
+
+    @Test
+    public void testNegativeIntegersReturnNaNFirstNegativeInteger() throws Exception {
+        GCD gcd = new GCD(-1, 2);
+        int value = gcd.calculate();
+        assertEquals(NaN, value);
+    }
+
+    @Test
+    public void testNegativeIntegersReturnNaNSecondNegativeInteger() throws Exception {
+        GCD gcd = new GCD(1, -2);
+        int value = gcd.calculate();
+        assertEquals(NaN, value);
+    }
+
+    @Test
+    public void testNegativeIntegersReturnNaNBothNegativeInteger() throws Exception {
+        GCD gcd = new GCD(-1, -2);
+        int value = gcd.calculate();
+        assertEquals(NaN, value);
     }
 
 }
