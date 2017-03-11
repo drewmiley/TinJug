@@ -4,7 +4,7 @@ public class GCD {
 
     }
 
-    public void calculate() {
-        
+    public int calculate() {
+        return 0;
     }
 }
