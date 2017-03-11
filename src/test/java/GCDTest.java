@@ -120,4 +120,43 @@ public class GCDTest {
         assertEquals(1, value, 0);
     }
 
+    @Test
+    public void testCalculateReturnsTheCorrectValueForTwoNonNegativeIntegers() throws Exception {
+        GCD gcd = new GCD(13, 169);
+        float value = gcd.calculate();
+        assertEquals(13, value, 0);
+
+        gcd = new GCD(169, 13);
+        value = gcd.calculate();
+        assertEquals(13, value, 0);
+
+        gcd = new GCD(13, 13);
+        value = gcd.calculate();
+        assertEquals(13, value, 0);
+
+        gcd = new GCD(6, 15);
+        value = gcd.calculate();
+        assertEquals(3, value, 0);
+
+        gcd = new GCD(15, 6);
+        value = gcd.calculate();
+        assertEquals(3, value, 0);
+
+        gcd = new GCD(8, 16);
+        value = gcd.calculate();
+        assertEquals(8, value, 0);
+
+        gcd = new GCD(16, 8);
+        value = gcd.calculate();
+        assertEquals(8, value, 0);
+
+        gcd = new GCD(42, 49);
+        value = gcd.calculate();
+        assertEquals(7, value, 0);
+
+        gcd = new GCD(49, 42);
+        value = gcd.calculate();
+        assertEquals(7, value, 0);
+    }
+
 }
